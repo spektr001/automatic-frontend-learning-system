@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+@-webkit-keyframes swing {
+    15% {
+        -webkit-transform: translateX(9px);
+        transform: translateX(9px);
+    }
+    30% {
+        -webkit-transform: translateX(-9px);
+        transform: translateX(-9px);
+    }
+    40% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    50% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+    65% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes swing {
+    15% {
+        -webkit-transform: translateX(9px);
+        transform: translateX(9px);
+    }
+    30% {
+        -webkit-transform: translateX(-9px);
+        transform: translateX(-9px);
+    }
+    40% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    50% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+    65% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.header__Block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background-color: #308446;
+    /* position: static; */
+}
+
+.headerLogo__Block {
+    display: grid;
+    grid-template-columns: 6em auto;
+}
+
+.logoLink__btn {
+    display: grid;
+    justify-self: end;
+}
+
+.logoLink__img {
+    width: 70px;
+    &:hover {
+        background: #00008b;
+        transition: 1s;
+    }
+}
+
+.headerName__txt {
+    margin-left: 10px;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 42px;
+    &:hover {
+        color: #308446;
+        transition: 2s;
+    }
+}
+.headerNav__Block {
+    display: grid;
+}
+
+.logIn__btn {
+    justify-self: end;
+    &:hover {
+        -webkit-animation: swing 2s ease;
+        animation: swing 2s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+}
+
+.logIn__img {
+    margin-right: 20px;
+    width: 50px;
+}
