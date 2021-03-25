@@ -56,15 +56,22 @@
 
 .header__Block {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 10em 5em;
+    justify-content: space-between;
     align-items: center;
     background-color: #308446;
-    /* position: static; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    height: 5em;
+    &:hover {
+        opacity: unset;
+    }
 }
 
 .headerLogo__Block {
     display: grid;
-    grid-template-columns: 6em auto;
+    grid-template-columns: 2em 13em;
+    grid-column-gap: 5em;
 }
 
 .logoLink__btn {
@@ -73,37 +80,53 @@
 }
 
 .logoLink__img {
+    margin-top: -7px;
     width: 70px;
+    opacity: 0.8;
+    position: fixed;
+    content: url(../../assets/images/closed-box.png);
     &:hover {
+        width: 70px;
+        content: url(../../assets/images/open-box.png);
         background: #00008b;
         transition: 1s;
+        cursor: pointer;
     }
 }
 
 .headerName__txt {
-    margin-left: 10px;
     font-family: "DotGothic16", sans-serif;
-    font-size: 42px;
+    font-size: 38px;
     &:hover {
-        color: #308446;
+        color: transparent;
         transition: 2s;
     }
 }
+
 .headerNav__Block {
     display: grid;
 }
 
-.logIn__btn {
-    justify-self: end;
-    &:hover {
+.logIn__btn:hover {
         -webkit-animation: swing 2s ease;
         animation: swing 2s ease;
         -webkit-animation-iteration-count: 1;
         animation-iteration-count: 1;
-    }
 }
 
 .logIn__img {
-    margin-right: 20px;
+    margin-bottom: -7px;
     width: 50px;
+}
+
+@media (max-width: 790px) {
+    .header__Block {
+        grid-template-columns: 18em 4em;
+    }
+    .headerName__txt {
+        font-size: 35px;
+    }
+    .headerLogo__Block {
+        grid-template-columns: 1em 13em;
+    }
 }
