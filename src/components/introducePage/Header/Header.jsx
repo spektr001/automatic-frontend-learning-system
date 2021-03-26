@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {animateScroll as scroll} from 'react-scroll'
 import clsObj from './header.module.scss'
-import LogIn from '../../assets/images/enter.png'
+import LogIn from '../../../assets/images/enter.png'
 
 
 export class Header extends Component {
@@ -20,7 +20,7 @@ export class Header extends Component {
                     <a className={clsObj.logoLink__btn} onClick={this.handleClick}>
                         <img alt="Logo" className={clsObj.logoLink__img} />
                     </a>
-                    <span className={clsObj.headerName__txt}>FrontEndBox</span>
+                    <span className={clsObj.headerTitle__txt}>FrontEndBox</span>
                 </div>
                 <div className={clsObj.headerNav__Block}>
                     <a className={clsObj.logIn__btn} href="#">

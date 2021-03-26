@@ -84,19 +84,19 @@
     width: 70px;
     opacity: 0.8;
     position: fixed;
-    content: url(../../assets/images/closed-box.png);
+    content: url(../../../assets/images/closed-box.png);
     &:hover {
         width: 70px;
-        content: url(../../assets/images/open-box.png);
+        content: url(../../../assets/images/open-box.png);
         background: #00008b;
         transition: 1s;
         cursor: pointer;
     }
 }
 
-.headerName__txt {
+.headerTitle__txt {
     font-family: "DotGothic16", sans-serif;
-    font-size: 38px;
+    font-size: 35px;
     &:hover {
         color: transparent;
         transition: 2s;
@@ -122,9 +122,6 @@
 @media (max-width: 790px) {
     .header__Block {
         grid-template-columns: 18em 4em;
-    }
-    .headerName__txt {
-        font-size: 35px;
     }
     .headerLogo__Block {
         grid-template-columns: 1em 13em;

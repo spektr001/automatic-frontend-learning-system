@@ -7,6 +7,7 @@ $cyrillicFont: "Amatic SC", cursive;
 
 .main__Block {
   padding-top: 100px;
+  padding-bottom: 100px;
   display: grid;
   grid-row-gap: 1em;
   justify-items: center;
@@ -20,6 +21,8 @@ $cyrillicFont: "Amatic SC", cursive;
 }
 
 .motiv__Block {
+  margin-left: 10px;
+  margin-right: 10px;
   border: 5px solid #00008b;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: transparent;
@@ -52,7 +55,6 @@ $cyrillicFont: "Amatic SC", cursive;
 
 @media (max-width: 790px) {
   .motivRow__Block {
-    display: grid;
     grid-auto-flow: row;
     grid-row-gap: 1em;
   }

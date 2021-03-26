@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+.footer__Block {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 10em 8em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.footerLogo__Block {
+    display: grid;
+    grid-template-columns: 6em 13em;
+    grid-column-gap: 1em;
+}
+
+.logoLink__btn {
+    display: grid;
+    justify-self: end;
+}
+
+.logoLink__img {
+    width: 49px;
+}
+
+.footerTitle__txt {
+    font-family: "DotGothic16", sans-serif;
+    font-size: 29px;
+    color: #308446;
+    &:hover {
+        color: transparent;
+        transition: 2s;
+    }
+}
+
+.date__txt {
+    color: #ffffff;
+}
+
+@media (max-width: 790px) {
+    .footer__Block {
+        grid-template-columns: 16em 6em;
+    }
+    .footerLogo__Block {
+        grid-template-columns: 4em 10em;
+    }
+  }
