@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import moment from 'moment'
 import clsObj from './footer.module.scss'
 import Logo from '../../../assets/images/open-box.png'
 
-const moment = require('moment')
-
-
-export class Footer extends Component {
-    render() { 
+export function Footer() {
         return ( 
             <footer className={clsObj.footer__Block}>
                 <div className={clsObj.footerLogo__Block}>
@@ -21,4 +18,3 @@ export class Footer extends Component {
             </footer>
          );
     }
-}

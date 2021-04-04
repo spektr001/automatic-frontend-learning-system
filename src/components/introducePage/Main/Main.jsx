@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import clsObj from './main.module.scss'
 import { MotivationBlock } from './MotivationBlock';
 
-export class Main extends Component {
-    render() {
+export function Main() {
         return (
             <main className={clsObj.main__Block}>
                 <MotivationBlock animation=" wow bounceInUp" text="Мрієш?" blockType="title" />
@@ -79,5 +78,4 @@ export class Main extends Component {
                     <MotivationBlock animation=" wow flipInX" text="FrontEndBox" textType="latin" />
             </main>
         );
-    }
 }
