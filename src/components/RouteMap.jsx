@@ -7,7 +7,7 @@ export default function RouteMap() {
     return (
         <Router>
             <Switch>
-                <Route path="/dashboard" component={Dashboard} />
+                <Route path={localStorage.name !== "" ? "/" : "/dashboard"} component={Dashboard} />
                 <Route path="/" component={IntroducePage} />
             </Switch>
         </Router>

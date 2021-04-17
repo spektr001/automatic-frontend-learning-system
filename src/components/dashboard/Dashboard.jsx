@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { Header } from '../introducePage/Header/Header'
-/* import { Navbar } from './NavBar/Navbar'; */
+import ScreenRouteMap from './Screen/Screen';
+
 
 export function Dashboard() {
 
     useEffect(() => {
-        if (localStorage.length === 1) {
+        if (localStorage.lang === "") {
             let lang = window.confirm("Задля кращого досвіду роботи, рекомендую змінити мову інтерфейсу на англійську.\nБажаєш змінити мову на англійську?")
             localStorage.setItem('lang', lang ? 'eng' : 'ua')
         }
@@ -14,7 +15,7 @@ export function Dashboard() {
         return (
             <>
                 <Header />
-               {/*  <Navbar /> */}
+                <ScreenRouteMap />
             </>
         );
 }

@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom'
 import LogIn from '../../../assets/images/enter.png'
 import clsObj from './header.module.scss'
+import { Dialog, DialogTitle, DialogContent, DialogActions, makeStyles, Button, DialogContentText, TextField } from '@material-ui/core'
+
+const useStyles = makeStyles({
+    modalBlock: {
+        backgroundColor: "transparent",
+        color: "#308446",
+    }
+})
 
 export function LogInBtn() {
+
+    const cls = useStyles()
 
     const [modalOpen, setModal] = useState(false);
     const [isRedirect, setRedirect] = useState(false);
     const [name, setName] = useState("");
+
+    useEffect(() => {
+        localStorage.setItem('name', name)
+    }, [name]);
 
     const handleChange = (e) => {
         setName(e.target.value)
@@ -17,9 +31,12 @@ export function LogInBtn() {
         if (name === "") {
             alert("Введи, будь-ласка, своє ім'я")
         } else {
-            localStorage.setItem('name', name);
             setRedirect(true)
         }
+    }
+
+    const handleClose = () => {
+        setModal(false)
     }
 
     const redirect = () => {
@@ -32,32 +49,31 @@ export function LogInBtn() {
 
     return (
         <>
-            <a className="user-block_add-btn" onClick={() => setModal(true) }>
+            <a className="user-block_add-btn" onClick={() => setModal(true)}>
                 <img src={LogIn} alt="Login" className={clsObj.logIn__img} />
             </a>
             {redirect()}
-            {modalOpen && (
-                <div>
-                    <div className={clsObj.modalFilter}>
-                        <form onSubmit={handleSubmit} className={clsObj.modalFilter__Block}>
-                            <p className={clsObj.modal_title}>Введи своє імя</p><br />
-                            <label className={clsObj.modal_label}>Імя:
-                                <input
-                                    onChange={handleChange}
-                                    className={clsObj.modal_input}
-                                    type="text"
-                                    name="name"
-                                    value={name}
-                                />
-                            </label>
-                            <div className={clsObj.modal_btn__Block}>
-                                <button className={clsObj.modal_btn} type="submit">Підтвердити</button>
-                                <button className={clsObj.modal_btn} onClick={() => setModal(false)}>Відмінити</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            )}
+            <Dialog open={modalOpen} onClose={handleClose} aria-labeledby="form-dialog-title">
+                <DialogTitle className={cls.modalBlock} id="form-dialog-title">Введи своє імя</DialogTitle>
+                <DialogContent className={cls.modalBlock}>
+                    <DialogContentText className={cls.modalBlock}>Як я можу до тебе звертатись?</DialogContentText>
+                    <TextField
+                        className={cls.modalBlock}
+                        onChange={handleChange}
+                        autoFocus
+                        margin="dense"
+                        id="name"
+                        label="Імя"
+                        type="text"
+                        value={name}
+                        fullWidth
+                    />
+                </DialogContent>
+                <DialogActions className={cls.modalBlock}>
+                    <Button onClick={handleSubmit} color="primary">Підтвердити</Button>
+                    <Button onClick={handleClose} color="secondary">Відмінити</Button>
+                </DialogActions>
+            </Dialog>
         </>
     );
 }

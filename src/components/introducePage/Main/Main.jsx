@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsObj from './main.module.scss'
 import { MotivationBlock } from './MotivationBlock';
 
 export function Main() {
+
+    useEffect(() => {
+        const emptyItem = ""
+        localStorage.setItem("name", emptyItem)
+        localStorage.setItem("lang", emptyItem)
+        })
+        
         return (
             <main className={clsObj.main__Block}>
                 <MotivationBlock animation=" wow bounceInUp" text="Мрієш?" blockType="title" />
