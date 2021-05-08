@@ -8,6 +8,7 @@ export function Main() {
         const emptyItem = ""
         localStorage.setItem("name", emptyItem)
         localStorage.setItem("lang", emptyItem)
+        localStorage.setItem("achiv1", emptyItem)
         })
         
         return (

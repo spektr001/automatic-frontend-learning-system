@@ -20,12 +20,13 @@
         "react-hooks"
     ],
     "rules": {
+        "react/jsx-key": "off",
         "react/prop-types": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "no-var":"error",
         "no-irregular-whitespace":"warn",
-        "no-unused-vars": "error",
+        "no-unused-vars": "warn",
         "no-inline-comments": "warn"
     }
 }

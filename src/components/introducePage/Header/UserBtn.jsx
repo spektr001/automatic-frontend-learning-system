@@ -15,7 +15,7 @@ export function UserBtn() {
 
   const cls = useStyles()
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const [name, setName] = useState(localStorage.name);
   const [modalOpen, setModal] = useState(false);
 

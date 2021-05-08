@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 $latinFont: "DotGothic16", sans-serif;
 
 $cyrillicFont: "Press Start 2P", cursive;
 
+$articlesFont: 'Jura', sans-serif;
+
+$main-color: #308446;
+
+
+
 .selection_Block {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    background-color: #308446;
+    background-color: $main-color;
 }
 
 .selection__btn {
@@ -20,15 +24,81 @@ $cyrillicFont: "Press Start 2P", cursive;
     background-color: #000;
     border: none;
     justify-items: center;
+    text-decoration: none;
     &:hover {
         cursor: pointer;
-        filter:invert(1)
+        filter: invert(1);
     }
 }
 
 .selection__txt {
     color: #308446;
     font-family: $cyrillicFont;
-    font-size: 25px;
+    font-size: 24px;
     grid-row-start: 2;
+}
+
+.begining_Block {
+    background-color: #f2f3f4;
+    text-align: center;
+}
+
+.greet_Block {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.greet__txt {
+    font-family: $cyrillicFont;
+    color: $main-color;
+    font-size: 20px;
+}
+
+.greet__article {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #000;
+    font-family: $articlesFont;
+    font-size: 24px;
+    line-height: 45px;
+    text-decoration: none;
+}
+.greet__link {
+    text-decoration: none;
+    &:visited {
+        color: $main-color;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.fun_Block {
+    display: grid;
+    grid-template-rows: repeat(10, 50em);
+    text-align: center;
+}
+
+.fun__txt {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: $articlesFont;
+    font-size: 30px;
+    color: #000;
+}
+
+.nextLesson__btn {
+    padding: 8px 8px;
+    font-size: 50px;
+    color: $main-color;
+    font-family: $cyrillicFont;
+    background-color: #00008b;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        filter: invert(1);
+        border: none;
+        transition: 1s;
+    }
 }
