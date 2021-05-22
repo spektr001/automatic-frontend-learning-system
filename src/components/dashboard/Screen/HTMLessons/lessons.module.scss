@@ -1,0 +1,62 @@
+$cyrillicFont: "Press Start 2P", cursive;
+
+$articlesFont: "Jura", sans-serif;
+
+.lesson_Block {
+    background-color: #f2f3f4;
+    text-align: center;
+}
+
+.lesson__txt_Block {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f2f3f4;
+    font-family: $articlesFont;
+    font-size: 23px;
+}
+
+.lesson_title {
+    padding-top: 20px;
+    font-family: $cyrillicFont;
+    margin-top: 0;
+}
+
+.lesson__txt {
+    line-height: 50px;
+    text-indent: 50px;
+    text-align: left;
+}
+
+.lesson__subtitle {
+    text-align: left;
+}
+
+.lesson_Block__code {
+    display: grid;
+    grid-template-columns: 1fr 32em 1fr;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+.lesson__code {
+    grid-column-start: 2;
+    text-align: left;
+    font-size: 15px;
+}
+
+.lesson__link {
+    font-family: $articlesFont;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.lesson__link_list {
+    margin-bottom: 0;
+    list-style: none;
+    text-align: left;
+}

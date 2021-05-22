@@ -1,5 +1,6 @@
 import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
+import { animateScroll as scroll } from 'react-scroll'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -19,6 +20,8 @@ firebase.initializeApp({
 export const Context = createContext(null)
 
 const firestore = firebase.firestore()
+
+window.onload = () => {scroll.scrollToTop()};
 
 ReactDOM.render(
   <Context.Provider value={{

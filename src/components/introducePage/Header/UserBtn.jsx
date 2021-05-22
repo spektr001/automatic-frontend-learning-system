@@ -52,7 +52,7 @@ export function UserBtn() {
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleOpenMenu}>
-        <img src={User} alt="user-image" className={clsObj.logIn__img} />
+          <img src={User} alt="user-image" className={clsObj.logIn__img} />
       </Button>
       <Menu
         id="simple-menu"

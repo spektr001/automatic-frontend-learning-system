@@ -66,8 +66,8 @@ export function Navbar(props) {
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
                             <Link className={cls.nav__item} to='/dashboard/HTML/lesson1'><ListItemText primary={langSwitcher("What is it HTML?", "Що таке HTML?")} /></Link>
                         </ListItem>
-                        <ListItem className={cls.nav__item} alignItems='center' button onClick={() => { }}>
-                            <ListItemText primary={langSwitcher("", "")} />
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/HTML/lesson2'><ListItemText primary={langSwitcher("Basic HTML tags ", "Основні HTML теги")} /></Link>
                         </ListItem>
                         <Box className={cls.nav__title} textAlign="left" p={2}>
                             CSS

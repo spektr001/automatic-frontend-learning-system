@@ -6,3 +6,16 @@
 #root {
    background: linear-gradient(135deg, #000000, #00008b, #308446);
 }
+
+
+a {
+   text-decoration: none;
+   &:visited {
+      color: #308446;
+   }
+   &:hover {
+      color:#00008b;
+      text-decoration: underline;
+      cursor: pointer;
+   }
+}
