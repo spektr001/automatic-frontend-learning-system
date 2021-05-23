@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs'
 import { useDocumentData } from 'react-firebase-hooks/firestore'
-import { CircularProgress } from '@material-ui/core';
+import { LinearProgress } from '@material-ui/core';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { solarizedDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { Context } from '../../../../index'
@@ -23,7 +24,7 @@ export function LessonOne() {
     if (loading) {
         return (
             <div className={clsObj.lesson_Block}>
-                <CircularProgress />
+                <LinearProgress />
             </div>
         )
     }
@@ -71,7 +72,7 @@ export function LessonOne() {
                     <li><a className={clsObj.lesson__link} rel="noreferrer" target="_blank" href={langSwitcher('https://en.wikipedia.org/wiki/HTML', 'https://uk.wikipedia.org/wiki/HTML')}>{langSwitcher('Wikipedia', 'Вікіпедія')}</a></li>
                     <li><a className={clsObj.lesson__link} rel="noreferrer" target="_blank" href={langSwitcher('https://www.youtube.com/watch?v=u0OeZfIfBRI', 'https://www.youtube.com/watch?v=jwZYK23hdMg')}>YouTube</a></li>
                 </ul>
-                <a href={langSwitcher('', '')}>{langSwitcher('', '')}</a>
+                <Link to="/dashboard/HTML/lesson2"><button className={clsObj.lesson__next_btn}>{langSwitcher('Next lesson', 'Наступний урок')}</button></Link>
             </div>
         </div>
     );

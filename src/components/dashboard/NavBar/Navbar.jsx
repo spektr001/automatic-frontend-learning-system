@@ -67,7 +67,13 @@ export function Navbar(props) {
                             <Link className={cls.nav__item} to='/dashboard/HTML/lesson1'><ListItemText primary={langSwitcher("What is it HTML?", "Що таке HTML?")} /></Link>
                         </ListItem>
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
-                            <Link className={cls.nav__item} to='/dashboard/HTML/lesson2'><ListItemText primary={langSwitcher("Basic HTML tags ", "Основні HTML теги")} /></Link>
+                            <Link className={cls.nav__item} to='/dashboard/HTML/lesson2'><ListItemText primary={langSwitcher("Basic tags", "Основні теги")} /></Link>
+                        </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/HTML/lesson3'><ListItemText primary={langSwitcher("Other tags", "Інші теги")} /></Link>
+                        </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/HTML/lesson4'><ListItemText primary={langSwitcher("Attributes", "Атрибути")} /></Link>
                         </ListItem>
                         <Box className={cls.nav__title} textAlign="left" p={2}>
                             CSS

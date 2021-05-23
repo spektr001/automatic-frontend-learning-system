@@ -49,6 +49,13 @@ $articlesFont: "Jura", sans-serif;
     font-size: 15px;
 }
 
+.lesson_Block__result {
+    padding: 10px 10px;
+    color: #fff;
+    background-color: #000;
+    text-align: left;
+}
+
 .lesson__link {
     font-family: $articlesFont;
     font-size: 40px;
@@ -59,4 +66,19 @@ $articlesFont: "Jura", sans-serif;
     margin-bottom: 0;
     list-style: none;
     text-align: left;
+}
+
+.lesson__next_btn {
+    margin: 20px 20px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    font-family: $cyrillicFont;
+    background-color: #308446;
+    color: #00008b;
+    border: none;
+    &:hover {
+        filter: invert(1);
+        cursor: pointer;
+    }
 }
