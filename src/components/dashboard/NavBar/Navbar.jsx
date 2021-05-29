@@ -78,6 +78,12 @@ export function Navbar(props) {
                         <Box className={cls.nav__title} textAlign="left" p={2}>
                             CSS
                     </Box>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/CSS/lesson1'><ListItemText primary={langSwitcher("What is it CSS?", "Що таке CSS?")} /></Link>
+                        </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/CSS/lesson2'><ListItemText primary={langSwitcher("Selectors", "Селектори")} /></Link>
+                        </ListItem>
                         <Box className={cls.nav__title} textAlign="left" p={2}>
                             JavaScript
                     </Box>

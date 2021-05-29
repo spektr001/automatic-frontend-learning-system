@@ -9,6 +9,7 @@ export function Main() {
         localStorage.setItem("name", emptyItem)
         localStorage.setItem("lang", emptyItem)
         localStorage.setItem("achiv1", emptyItem)
+        localStorage.setItem("achiv1", emptyItem)
         })
         
         return (

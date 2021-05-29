@@ -2,10 +2,12 @@ import React from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { SelectionScreen } from './SelectionScreen/SelectionScreen'
 import { BeginingScreen } from './BeginingScreen/BeginingScreen'
-import { LessonOne } from './HTMLessons/LessonOne'
-import { LessonTwo } from './HTMLessons/LessonTwo'
-import { LessonThree } from './HTMLessons/LessonThree'
-import { LessonFour } from './HTMLessons/LessonFour'
+import { HTMLessonOne } from './Lessons/HTMLessons/LessonOne'
+import { HTMLessonTwo } from './Lessons/HTMLessons/LessonTwo'
+import { HTMLessonThree } from './Lessons/HTMLessons/LessonThree'
+import { HTMLessonFour } from './Lessons/HTMLessons/LessonFour'
+import { CSSLessonOne } from './Lessons/CSSLessons/LessonOne'
+import { CSSLessonTwo } from './Lessons/CSSLessons/LessonTwo'
 
 export default function ScreenRouteMap() {
 
@@ -13,10 +15,12 @@ export default function ScreenRouteMap() {
         <>
             <Router>
                 <Switch>
-                    <Route path="/dashboard/HTML/lesson4" component={LessonFour} />
-                    <Route path="/dashboard/HTML/lesson3" component={LessonThree} />
-                    <Route path="/dashboard/HTML/lesson2" component={LessonTwo} />
-                    <Route path="/dashboard/HTML/lesson1" component={LessonOne} />
+                    <Route path="/dashboard/CSS/lesson2" component={CSSLessonTwo} />
+                    <Route path="/dashboard/CSS/lesson1" component={CSSLessonOne} />
+                    <Route path="/dashboard/HTML/lesson4" component={HTMLessonFour} />
+                    <Route path="/dashboard/HTML/lesson3" component={HTMLessonThree} />
+                    <Route path="/dashboard/HTML/lesson2" component={HTMLessonTwo} />
+                    <Route path="/dashboard/HTML/lesson1" component={HTMLessonOne} />
                     <Route path="/dashboard/begining" component={BeginingScreen} />
                     <Route path="/" component={SelectionScreen} />
                 </Switch>
