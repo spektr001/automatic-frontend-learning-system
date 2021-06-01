@@ -61,6 +61,58 @@ $articlesFont: "Jura", sans-serif;
     color: red;
 }
 
+.result2:link {
+    color: red;
+}
+
+.result3:visited {
+    color: green;
+}
+
+.result4:hover {
+    color: blue;
+}
+
+.result5 {
+    display: block;
+    background-color: green;
+}
+
+.result6 {
+    display: inline-block;
+    background-color: green;
+}
+
+.result7 {
+    display: flex;
+    justify-content: center;
+    background-color: green;
+}
+
+.result8 {
+    display: grid;
+    justify-content: end;
+    background-color: green;
+}
+
+.result9 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 50px;
+    background-color: green;
+}
+
+.result10 {
+    width: 100px;
+    background-color: green;
+}
+
+.result11 {
+    height: 200px;
+    background-color: green;
+}
+
 .lesson__link {
     font-family: $articlesFont;
     font-size: 40px;

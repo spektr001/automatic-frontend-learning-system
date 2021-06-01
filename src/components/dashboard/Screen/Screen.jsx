@@ -8,6 +8,8 @@ import { HTMLessonThree } from './Lessons/HTMLessons/LessonThree'
 import { HTMLessonFour } from './Lessons/HTMLessons/LessonFour'
 import { CSSLessonOne } from './Lessons/CSSLessons/LessonOne'
 import { CSSLessonTwo } from './Lessons/CSSLessons/LessonTwo'
+import { CSSLessonThree } from './Lessons/CSSLessons/LessonThree'
+import { CSSLessonFour } from './Lessons/CSSLessons/LessonFour'
 
 export default function ScreenRouteMap() {
 
@@ -15,6 +17,8 @@ export default function ScreenRouteMap() {
         <>
             <Router>
                 <Switch>
+                    <Route path="/dashboard/CSS/lesson4" component={CSSLessonFour} />
+                    <Route path="/dashboard/CSS/lesson3" component={CSSLessonThree} />
                     <Route path="/dashboard/CSS/lesson2" component={CSSLessonTwo} />
                     <Route path="/dashboard/CSS/lesson1" component={CSSLessonOne} />
                     <Route path="/dashboard/HTML/lesson4" component={HTMLessonFour} />

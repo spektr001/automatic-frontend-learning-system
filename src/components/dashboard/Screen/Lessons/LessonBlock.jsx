@@ -75,7 +75,7 @@ export function LessonBlock(props) {
                     <li><a className={clsObj.lesson__link} rel="noreferrer" target="_blank" href={langSwitcher(props.textEng, props.textUa)}>{langSwitcher('Article', 'Стаття')}</a></li>
                     <li><a className={clsObj.lesson__link} rel="noreferrer" target="_blank" href={langSwitcher(props.videoEng, props.videoUa)}>YouTube</a></li>
                 </ul>
-                <Link to={"/dashboard/" + props.nextTheme + "/lesson" + [props.lesson + 1 >= 5 ? 1 : props.lesson + 1]}><button className={clsObj.lesson__next_btn}>{langSwitcher('Next lesson', 'Наступний урок')}</button></Link>
+                <Link to={"/dashboard/" + [props.theme == 'HTML' && props.lesson == 4 ? 'CSS' : props.theme == 'CSS' && props.lesson == 4 ? 'JavaScript' : props.theme] + "/lesson" + [props.lesson + 1 >= 5 ? 1 : props.lesson + 1]}><button className={clsObj.lesson__next_btn}>{langSwitcher('Next lesson', 'Наступний урок')}</button></Link>
             </div>
         </div>
     );

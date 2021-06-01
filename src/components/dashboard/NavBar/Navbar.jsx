@@ -10,6 +10,7 @@ const useStyles = makeStyles({
         width: '8em',
         fontFamily: '"DotGothic16", sans-serif',
         fontSize: '20px',
+        overflowX: 'hidden'
     },
 
     nav__topBtn: {
@@ -28,6 +29,17 @@ const useStyles = makeStyles({
 
     nav__item: {
         textDecoration: 'none',
+        '&:hover': {
+            color: '#00008b',
+        },
+        '&:active': {
+            color: '#000',
+            textDecoration: 'underline'
+        },
+        '&:visited': {
+            color: '#308446',
+            backgroundColor: '#00008b'
+        }
     },
 })
 
@@ -83,6 +95,12 @@ export function Navbar(props) {
                         </ListItem>
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
                             <Link className={cls.nav__item} to='/dashboard/CSS/lesson2'><ListItemText primary={langSwitcher("Selectors", "Селектори")} /></Link>
+                        </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/CSS/lesson3'><ListItemText primary={langSwitcher("Pseudo-classes", "Псевдокласи")} /></Link>
+                        </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/CSS/lesson4'><ListItemText primary={langSwitcher("Basic properties", "Основні властивості")} /></Link>
                         </ListItem>
                         <Box className={cls.nav__title} textAlign="left" p={2}>
                             JavaScript
