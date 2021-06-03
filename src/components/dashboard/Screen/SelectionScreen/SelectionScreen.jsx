@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import { WOW } from 'wowjs'
 import clsObj from '../screen.module.scss'
 import langSwitcher from '../../../languageSwitcher'
-import { Navbar } from '../../NavBar/Navbar';
+import { Navbar } from '../../Modals/Navbar';
+import { TestModal } from '../../Modals/TestModal';
 
 export function SelectionScreen() {
 
     const [open, setOpen] = useState(false)
+    const [modal, setModal] = useState(false)
 
     useEffect(() => {
         const wow = new WOW({ live: false })
@@ -15,11 +17,12 @@ export function SelectionScreen() {
     }, [])
 
     const updateState = (newValue) => { setOpen(newValue) }
+    const updateTestState = (newValue) => { setModal(newValue) }
 
     return (
         <>
             <div className={clsObj.selection_Block}>
-                <button className={clsObj.selection__btn + " wow bounceInLeft"}>
+                <button className={clsObj.selection__btn + " wow bounceInLeft"} onClick={() => setModal(true)}>
                     <span className={clsObj.selection__txt}>{langSwitcher("Take a test", "Пройти тест")}</span>
                 </button>
                 <button className={clsObj.selection__btn + " wow bounceInRight"} onClick={() => setOpen(true)}>
@@ -30,7 +33,8 @@ export function SelectionScreen() {
                 </Link>
             </div>
 
-            <Navbar navState={open} updateState={updateState}/>
+            <Navbar navState={open} updateState={updateState} />
+            <TestModal testState={modal} updateTestState={updateTestState} />
         </>
     )
 }

@@ -4,7 +4,7 @@ import { animateScroll as scroll } from 'react-scroll'
 import clsObj from './header.module.scss'
 import { LogInBtn } from './LogInBtn';
 import { UserBtn } from './UserBtn';
-import { Navbar } from '../../dashboard/NavBar/Navbar'
+import { Navbar } from '../../dashboard/Modals/Navbar'
 
 
 export function Header() {
