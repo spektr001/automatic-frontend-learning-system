@@ -5,6 +5,7 @@ import clsObj from './header.module.scss'
 import { LogInBtn } from './LogInBtn';
 import { UserBtn } from './UserBtn';
 import { Navbar } from '../../dashboard/Modals/Navbar'
+import { Link } from 'react-router-dom';
 
 
 export function Header() {
@@ -33,7 +34,7 @@ export function Header() {
                     <a className={clsObj.logoLink__btn + " wow bounceInLeft"} onClick={handleClick}>
                         <img alt="Logo" className={clsObj.logoLink__img} />
                     </a>
-                    <span className={clsObj.headerTitle__txt}>FrontEndBox</span>
+                    <Link to="/dashboard"><span className={clsObj.headerTitle__txt}>FrontEndBox</span></Link> 
                 </div>
                 {localStorage.name === "" ? <LogInBtn /> : <UserBtn />}
             </header>

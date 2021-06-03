@@ -45,9 +45,10 @@ $main-color: #308446;
 .headerTitle__txt {
     font-family: "DotGothic16", sans-serif;
     font-size: 35px;
+    color: #000;
     &:hover {
         color: transparent;
-        transition: 2s;
+        transition: 3s;
     }
 }
 
@@ -67,7 +68,7 @@ $main-color: #308446;
 
 .menuHi__txt {
     margin-right: 20px;
-    margin-left: 20px;
+    margin-left: 35px;
     margin-bottom: 20px;
     color: $main-color
 }

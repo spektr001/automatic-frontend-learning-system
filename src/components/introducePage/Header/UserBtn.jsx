@@ -41,6 +41,15 @@ export function UserBtn() {
     window.location.reload();
   }
 
+  const handleChangeTheme = () => {
+    if (localStorage.theme === 'light') {
+      localStorage.setItem("theme", 'dark')
+    } else {
+      localStorage.setItem("theme", 'light')
+    }
+    window.location.reload();
+  }
+
   const handleOpenMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -61,8 +70,8 @@ export function UserBtn() {
         open={Boolean(anchorEl)}
         onClose={handleCloseMenu}
       >
-        <span className={clsObj.menuHi__txt}>{langSwitcher("Hi, " + localStorage.name + ")", "Привіт, " + localStorage.name + ")") }</span>
-        <MenuItem onClick={handleCloseMenu}>{langSwitcher("Switch theme", "Змінити тему")}</MenuItem>
+        <span className={clsObj.menuHi__txt}>{langSwitcher("Hello, " + localStorage.name + ")", "Привіт, " + localStorage.name + ")") }</span>
+        <MenuItem onClick={handleChangeTheme}>{langSwitcher("Switch theme", "Змінити тему")}</MenuItem>
         <MenuItem onClick={handleChangeLang}>{langSwitcher("Change language", "Змінити мову")}</MenuItem>
         <MenuItem onClick={() => setModal(true)}>{langSwitcher("Change name", "Змінити ім'я")}</MenuItem>
         <MenuItem onClick={handleCloseMenu}>{langSwitcher("Change avatar", "Змінити аватар")}</MenuItem>

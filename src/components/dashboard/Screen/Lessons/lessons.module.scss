@@ -2,15 +2,23 @@ $cyrillicFont: "Press Start 2P", cursive;
 
 $articlesFont: "Jura", sans-serif;
 
+$dark-theme: #202124;
+
 .lesson_Block {
     background-color: #f2f3f4;
     text-align: center;
 }
 
+.lesson_Block_dark {
+    background-color: $dark-theme;
+    text-align: center;
+    color: #fff;
+}
+
 .lesson__txt_Block {
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #f2f3f4;
+    background-color: transparent;
     font-family: $articlesFont;
     font-size: 23px;
 }

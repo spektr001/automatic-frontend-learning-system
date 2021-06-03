@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export function BeginingScreen() {
 
     return (
-        <div className={clsObj.begining_Block}>
+        <div className={localStorage.theme === 'dark' ? clsObj.begining_Block_dark : clsObj.begining_Block}>
             <div className={clsObj.greet_Block}>
                 <span className={clsObj.greet__txt}>
                     {langSwitcher("Welcome to FrontEndBox, dear " + localStorage.name + "!", "Ласкаво просимо в FrontEndBox, дорогий " + localStorage.name + "!")}

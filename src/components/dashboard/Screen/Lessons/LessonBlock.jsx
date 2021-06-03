@@ -62,7 +62,7 @@ export function LessonBlock(props) {
     }
 
     return (
-        <div className={clsObj.lesson_Block}>
+        <div className={localStorage.theme === 'dark' ? clsObj.lesson_Block_dark : clsObj.lesson_Block}>
             <h1 className={clsObj.lesson_title}>{lesson.title}</h1>
             <div className={clsObj.lesson__txt_Block}>
                 {lessonMap}
