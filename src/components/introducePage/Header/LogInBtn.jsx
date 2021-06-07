@@ -54,7 +54,7 @@ export function LogInBtn() {
             </a>
             {redirect()}
             <Dialog open={modalOpen} onClose={handleClose} aria-labeledby="form-dialog-title">
-                <DialogTitle className={cls.modalBlock} id="form-dialog-title">Введи своє імя</DialogTitle>
+                <DialogTitle className={cls.modalBlock} id="form-dialog-title">Введи своє ім&apos;я</DialogTitle>
                 <DialogContent className={cls.modalBlock}>
                     <DialogContentText className={cls.modalBlock}>Як я можу до тебе звертатись?</DialogContentText>
                     <TextField

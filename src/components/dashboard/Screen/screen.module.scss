@@ -11,12 +11,14 @@ $dark-theme: #202124;
     display: grid;
     grid-template-columns: repeat(3, auto);
     background-color: $main-color;
+    height: 100vh;
 }
 
 .selection_Block_dark {
     display: grid;
     grid-template-columns: repeat(3, auto);
     background-color: $dark-theme;
+    height: 100vh;
 }
 
 .selection__btn {

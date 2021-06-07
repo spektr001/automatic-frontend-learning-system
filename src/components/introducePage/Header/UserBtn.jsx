@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import clsObj from './header.module.scss'
-import User from '../../../assets/images/user.png'
+import User1 from '../../../assets/images/user.png'
+import User2 from '../../../assets/images/user2.png'
+import User3 from '../../../assets/images/user3.png'
+import User4 from '../../../assets/images/user4.png'
+import User5 from '../../../assets/images/user5.png'
 import langSwitcher from '../../languageSwitcher'
 import { Button, Menu, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions, makeStyles, TextField } from '@material-ui/core'
 
@@ -30,7 +34,7 @@ export function UserBtn() {
   const handleSubmit = () => {
     localStorage.setItem("name", name)
     setModal(false)
-}
+  }
 
   const handleChangeLang = () => {
     if (localStorage.lang === 'eng') {
@@ -45,9 +49,33 @@ export function UserBtn() {
     if (localStorage.theme === 'light') {
       localStorage.setItem("theme", 'dark')
     } else {
+      clsObj
       localStorage.setItem("theme", 'light')
     }
     window.location.reload();
+  }
+
+  const handleChangeAvatar = () => {
+    switch (localStorage.avatar) {
+      case User1:
+        localStorage.setItem('avatar', User2)
+        break;
+      case User2:
+        localStorage.setItem('avatar', User3)
+        break;
+      case User3:
+        localStorage.setItem('avatar', User4)
+        break;
+      case User4:
+        localStorage.setItem('avatar', User5)
+        break;
+      case User5:
+        localStorage.setItem('avatar', User1)
+        break;
+      default:
+        localStorage.setItem('avatar', User1)
+        break;
+    }
   }
 
   const handleOpenMenu = (event) => {
@@ -61,7 +89,7 @@ export function UserBtn() {
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleOpenMenu}>
-          <img src={User} alt="user-image" className={clsObj.logIn__img} />
+        <img src={localStorage.avatar} alt="user-image" className={clsObj.logIn__img} />
       </Button>
       <Menu
         id="simple-menu"
@@ -70,11 +98,11 @@ export function UserBtn() {
         open={Boolean(anchorEl)}
         onClose={handleCloseMenu}
       >
-        <span className={clsObj.menuHi__txt}>{langSwitcher("Hello, " + localStorage.name + ")", "Привіт, " + localStorage.name + ")") }</span>
+        <span className={clsObj.menuHi__txt}>{langSwitcher("Hello, " + localStorage.name + ")", "Привіт, " + localStorage.name + ")")}</span>
         <MenuItem onClick={handleChangeTheme}>{langSwitcher("Switch theme", "Змінити тему")}</MenuItem>
         <MenuItem onClick={handleChangeLang}>{langSwitcher("Change language", "Змінити мову")}</MenuItem>
         <MenuItem onClick={() => setModal(true)}>{langSwitcher("Change name", "Змінити ім'я")}</MenuItem>
-        <MenuItem onClick={handleCloseMenu}>{langSwitcher("Change avatar", "Змінити аватар")}</MenuItem>
+        <MenuItem onClick={handleChangeAvatar}>{langSwitcher("Change avatar", "Змінити аватар")}</MenuItem>
       </Menu>
 
       <Dialog open={modalOpen} onClose={handleCloseModal} aria-labeledby="form-dialog-title">

@@ -72,9 +72,7 @@ export function Navbar(props) {
                         <Link className={cls.nav__item} to='/dashboard/begining'><ListItem alignItems='center' button onClick={handleClick}>
                             <ListItemText primary={langSwitcher("Begining", "Початок")} />
                         </ListItem></Link>
-                        <Box className={cls.nav__title} textAlign="left" p={2}>
-                            HTML
-                    </Box>
+                        <Box className={cls.nav__title} textAlign="left" p={2}>HTML</Box>
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
                             <Link className={cls.nav__item} to='/dashboard/HTML/lesson1'><ListItemText primary={langSwitcher("What is it HTML?", "Що таке HTML?")} /></Link>
                         </ListItem>
@@ -87,9 +85,7 @@ export function Navbar(props) {
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
                             <Link className={cls.nav__item} to='/dashboard/HTML/lesson4'><ListItemText primary={langSwitcher("Attributes", "Атрибути")} /></Link>
                         </ListItem>
-                        <Box className={cls.nav__title} textAlign="left" p={2}>
-                            CSS
-                    </Box>
+                        <Box className={cls.nav__title} textAlign="left" p={2}>CSS</Box>
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
                             <Link className={cls.nav__item} to='/dashboard/CSS/lesson1'><ListItemText primary={langSwitcher("What is it CSS?", "Що таке CSS?")} /></Link>
                         </ListItem>
@@ -102,9 +98,10 @@ export function Navbar(props) {
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
                             <Link className={cls.nav__item} to='/dashboard/CSS/lesson4'><ListItemText primary={langSwitcher("Basic properties", "Основні властивості")} /></Link>
                         </ListItem>
-                        <Box className={cls.nav__title} textAlign="left" p={2}>
-                            JavaScript
-                    </Box>
+                        <Box className={cls.nav__title} textAlign="left" p={2}>JavaScript</Box>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/JavaScript/lesson1'><ListItemText primary={langSwitcher("What is it JavaScript?", "Що таке JavaScript?")} /></Link>
+                        </ListItem>
                     </List>
                 </>
             </SwipeableDrawer>

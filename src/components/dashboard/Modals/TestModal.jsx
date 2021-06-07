@@ -53,7 +53,8 @@ export function TestModal(props) {
                     ++result
                 }
             }
-            alert(langSwitcher("Your result: ", "Ваш результат ") + result + "/" + test.ra.length)
+            alert(langSwitcher("Your result: ", "Ваш результат ") + result + "/" + test.ra.length + 
+            langSwitcher(result >= 0 && result <= 4 ? " You are Junior!" : result >= 4 && result <= 8 ? " You are Middle!" : " You are Master!", "Ваш результат "))
             result = 0
             setCount(1)
             setQCount(1)
