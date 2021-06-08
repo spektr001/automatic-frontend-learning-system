@@ -9,7 +9,11 @@ export function Main() {
         localStorage.setItem("name", emptyItem)
         localStorage.setItem("lang", emptyItem)
         localStorage.setItem("achiv1", emptyItem)
-        localStorage.setItem("achiv1", emptyItem)
+        localStorage.setItem("achiv2", emptyItem)
+        localStorage.setItem("achiv3", emptyItem)
+        localStorage.setItem("achiv4", emptyItem)
+        localStorage.setItem("theme", "light")
+        localStorage.setItem("avatar", "/static/media/user.7ffa5473.png")
         })
         
         return (

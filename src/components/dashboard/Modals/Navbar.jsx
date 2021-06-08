@@ -100,7 +100,10 @@ export function Navbar(props) {
                         </ListItem>
                         <Box className={cls.nav__title} textAlign="left" p={2}>JavaScript</Box>
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
-                            <Link className={cls.nav__item} to='/dashboard/JavaScript/lesson1'><ListItemText primary={langSwitcher("What is it JavaScript?", "Що таке JavaScript?")} /></Link>
+                            <Link className={cls.nav__item} to='/dashboard/JS/lesson1'><ListItemText primary={langSwitcher("What is it JavaScript?", "Що таке JavaScript?")} /></Link>
+                        </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/JS/lesson2'><ListItemText primary={langSwitcher("Variables", "Змінні")} /></Link>
                         </ListItem>
                     </List>
                 </>
