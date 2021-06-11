@@ -105,6 +105,12 @@ export function Navbar(props) {
                         <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
                             <Link className={cls.nav__item} to='/dashboard/JS/lesson2'><ListItemText primary={langSwitcher("Variables", "Змінні")} /></Link>
                         </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/JS/lesson3'><ListItemText primary={langSwitcher("Data types", "Типи даних")} /></Link>
+                        </ListItem>
+                        <ListItem className={cls.nav__item} alignItems='center' button onClick={handleClick}>
+                            <Link className={cls.nav__item} to='/dashboard/JS/lesson4'><ListItemText primary={langSwitcher("Loops", " Цикли")} /></Link>
+                        </ListItem>
                     </List>
                 </>
             </SwipeableDrawer>

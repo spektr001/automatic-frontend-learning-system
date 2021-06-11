@@ -36,7 +36,7 @@ export function Header() {
                     </a>
                     <Link to="/dashboard"><span className={clsObj.headerTitle__txt}>FrontEndBox</span></Link> 
                 </div>
-                {localStorage.name === "" ? <LogInBtn /> : <UserBtn />}
+                {localStorage.name != "" && localStorage.name != undefined ? <UserBtn /> : <LogInBtn /> }
             </header>
 
             <Navbar navState={open} updateState={updateState} />

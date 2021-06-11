@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs'
 import { useDocumentData } from 'react-firebase-hooks/firestore'
@@ -8,6 +8,7 @@ import { solarizedDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { Context } from '../../../../index'
 import langSwitcher from '../../../languageSwitcher';
 import clsObj from './lessons.module.scss'
+import { TestModal } from '../../Modals/TestModal';
 
 export function LessonBlock(props) {
 
@@ -16,10 +17,13 @@ export function LessonBlock(props) {
         wow.init()
     })
 
+    const [modal, setModal] = useState(false)
     const { firestore } = useContext(Context)
     const [lesson, loading] = useDocumentData(
         firestore.doc(langSwitcher('lessons' + props.theme + 'Eng/lesson' + props.lesson, 'lessons' + props.theme + 'Ua/lesson' + props.lesson))
     )
+
+    const updateTestState = (newValue) => { setModal(newValue) }
 
     if (loading) {
         return (
@@ -62,6 +66,7 @@ export function LessonBlock(props) {
     }
 
     return (
+        <>
         <div className={localStorage.theme === 'dark' ? clsObj.lesson_Block_dark : clsObj.lesson_Block}>
             <h1 className={clsObj.lesson_title}>{lesson.title}</h1>
             <div className={clsObj.lesson__txt_Block}>
@@ -75,8 +80,13 @@ export function LessonBlock(props) {
                     <li><a className={clsObj.lesson__link} rel="noreferrer" target="_blank" href={langSwitcher(props.textEng, props.textUa)}>{langSwitcher('Article', 'Стаття')}</a></li>
                     <li><a className={clsObj.lesson__link} rel="noreferrer" target="_blank" href={langSwitcher(props.videoEng, props.videoUa)}>YouTube</a></li>
                 </ul>
-                <Link to={"/dashboard/" + [props.theme == 'HTML' && props.lesson == 4 ? 'CSS' : props.theme == 'CSS' && props.lesson == 4 ? 'JavaScript' : props.theme] + "/lesson" + [props.lesson + 1 >= 5 ? 1 : props.lesson + 1]}><button className={clsObj.lesson__next_btn}>{langSwitcher('Next lesson', 'Наступний урок')}</button></Link>
+                {props.theme == 'JS' && props.lesson == 4
+                ? <button className={clsObj.lesson__next_btn} onClick={() => setModal(true)}>{langSwitcher("Take a test", "Пройти тест")}</button>
+                : <Link to={"/dashboard/" + [props.theme == 'HTML' && props.lesson == 4 ? 'CSS' : props.theme == 'CSS' && props.lesson == 4 ? 'JavaScript' : props.theme] + "/lesson" + [props.lesson + 1 >= 5 ? 1 : props.lesson + 1]}><button className={clsObj.lesson__next_btn}>{langSwitcher('Next lesson', 'Наступний урок')}</button></Link>}
             </div>
         </div>
+
+        <TestModal testState={modal} updateTestState={updateTestState} />
+        </>
     );
 }

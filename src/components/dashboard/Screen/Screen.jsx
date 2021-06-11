@@ -12,6 +12,8 @@ import { CSSLessonThree } from './Lessons/CSSLessons/LessonThree'
 import { CSSLessonFour } from './Lessons/CSSLessons/LessonFour'
 import { JSLessonOne } from './Lessons/JSLessons/LessonOne'
 import { JSLessonTwo } from './Lessons/JSLessons/LessonTwo'
+import { JSLessonThree } from './Lessons/JSLessons/LessonThree'
+import { JSLessonFour } from './Lessons/JSLessons/LessonFour'
 
 export default function ScreenRouteMap() {
 
@@ -19,6 +21,8 @@ export default function ScreenRouteMap() {
         <>
             <Router>
                 <Switch>
+                    <Route path="/dashboard/JS/lesson4" component={JSLessonFour} />
+                    <Route path="/dashboard/JS/lesson3" component={JSLessonThree} />
                     <Route path="/dashboard/JS/lesson2" component={JSLessonTwo} />
                     <Route path="/dashboard/JS/lesson1" component={JSLessonOne} />
                     <Route path="/dashboard/CSS/lesson4" component={CSSLessonFour} />

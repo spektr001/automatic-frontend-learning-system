@@ -38,7 +38,7 @@ export function TestModal(props) {
 
     const handleClick = () => {
         if (answer === "") {
-            alert("!")
+            alert(langSwitcher('Please, choose something!', 'Будь-ласка, виберіть що небудь!'))
         } else if (count === test.ra.length) {
             setAnswerArray([...answerArray, answer])
             setCount(count + 1)
@@ -78,7 +78,7 @@ export function TestModal(props) {
     }
 
     return (
-        <Dialog open={props.testState} onClose={() => props.updateTestState(false)} aria-labeledby="form-dialog-title">
+        <Dialog open={props.testState} onClose={() => props.updateTestState(false)} aria-label="form-dialog-title">
             <DialogTitle className={cls.modalBlock} id="form-dialog-title">{langSwitcher("Test", "Тест")}</DialogTitle>
             <DialogContent className={cls.modalBlock}>
                 <FormControl component="fieldset">

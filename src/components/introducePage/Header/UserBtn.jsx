@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom'
 import clsObj from './header.module.scss'
 import User1 from '../../../assets/images/user.png'
 import User2 from '../../../assets/images/user2.png'
@@ -22,6 +23,7 @@ export function UserBtn() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [name, setName] = useState(localStorage.name);
   const [modalOpen, setModal] = useState(false);
+  const [isRedirect, setRedirect] = useState(false);
 
   const handleChange = (e) => {
     setName(e.target.value)
@@ -86,8 +88,25 @@ export function UserBtn() {
     setAnchorEl(null);
   };
 
+  const handleEscape = () => {
+    let esc = window.confirm("Увага! Після виходу усі дані буде втрачено.\nБажаєш вийти?")
+    if (esc) {
+      localStorage.clear()
+      setRedirect(true)
+    }
+  }
+
+  const redirect = () => {
+    if (isRedirect) {
+        return (
+            <Redirect to="/" />
+        )
+    }
+}
+
   return (
     <div>
+      {redirect()}
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleOpenMenu}>
         <img src={localStorage.avatar} alt="user-image" className={clsObj.logIn__img} />
       </Button>
@@ -103,8 +122,9 @@ export function UserBtn() {
         <MenuItem onClick={handleChangeLang}>{langSwitcher("Change language", "Змінити мову")}</MenuItem>
         <MenuItem onClick={() => setModal(true)}>{langSwitcher("Change name", "Змінити ім'я")}</MenuItem>
         <MenuItem onClick={handleChangeAvatar}>{langSwitcher("Change avatar", "Змінити аватар")}</MenuItem>
+        <MenuItem onClick={handleEscape}>{langSwitcher("Log out", "Вийти")}</MenuItem>
       </Menu>
-
+    
       <Dialog open={modalOpen} onClose={handleCloseModal} aria-labeledby="form-dialog-title">
         <DialogTitle className={cls.modalBlock} id="form-dialog-title">{langSwitcher("Enter your new name ", "Введи своє нове імя")}</DialogTitle>
         <DialogContent className={cls.modalBlock}>
