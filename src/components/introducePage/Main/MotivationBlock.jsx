@@ -7,7 +7,7 @@ export function MotivationBlock(props) {
     useEffect(() => {
         const wow = new WOW({ live: false })
         wow.init()
-    })
+    }, [])
 
         return (
             <div className={props.blockType !== 'title' ? clsObj.motiv__Block + props.animation : clsObj.motiv__Block_title + props.animation} 

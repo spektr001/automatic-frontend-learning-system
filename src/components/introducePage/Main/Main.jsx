@@ -14,7 +14,7 @@ export function Main() {
         localStorage.setItem("achiv4", emptyItem)
         localStorage.setItem("theme", "light")
         localStorage.setItem("avatar", "/static/media/user.7ffa5473.png")
-        })
+        }, [])
         
         return (
             <main className={clsObj.main__Block}>

@@ -31,10 +31,10 @@ const useStyles = makeStyles({
         textDecoration: 'none',
         '&:hover': {
             color: '#00008b',
+            textDecoration: 'underline'
         },
         '&:active': {
-            color: '#000',
-            textDecoration: 'underline'
+            color: '#000'
         },
         '&:visited': {
             color: '#308446',

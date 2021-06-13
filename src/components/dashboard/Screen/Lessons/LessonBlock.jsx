@@ -15,7 +15,7 @@ export function LessonBlock(props) {
     useEffect(() => {
         const wow = new WOW({ live: false })
         wow.init()
-    })
+    }, [])
 
     const [modal, setModal] = useState(false)
     const { firestore } = useContext(Context)
@@ -82,7 +82,7 @@ export function LessonBlock(props) {
                 </ul>
                 {props.theme == 'JS' && props.lesson == 4
                 ? <button className={clsObj.lesson__next_btn} onClick={() => setModal(true)}>{langSwitcher("Take a test", "Пройти тест")}</button>
-                : <Link to={"/dashboard/" + [props.theme == 'HTML' && props.lesson == 4 ? 'CSS' : props.theme == 'CSS' && props.lesson == 4 ? 'JavaScript' : props.theme] + "/lesson" + [props.lesson + 1 >= 5 ? 1 : props.lesson + 1]}><button className={clsObj.lesson__next_btn}>{langSwitcher('Next lesson', 'Наступний урок')}</button></Link>}
+                : <Link to={"/dashboard/" + [props.theme == 'HTML' && props.lesson == 4 ? 'CSS' : props.theme == 'CSS' && props.lesson == 4 ? 'JS' : props.theme] + "/lesson" + [props.lesson + 1 >= 5 ? 1 : props.lesson + 1]}><button className={clsObj.lesson__next_btn}>{langSwitcher('Next lesson', 'Наступний урок')}</button></Link>}
             </div>
         </div>
 

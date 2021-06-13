@@ -13,7 +13,8 @@ export function Footer() {
                     <span className={clsObj.footerTitle__txt}>FrontEndBox</span>
                 </div>
                 <div className={clsObj.date__Block}>
-                    <span className={clsObj.date__txt}>©2021-{moment().format('YYYY')}</span>
+                    <span className={clsObj.date__txt}>©2021-{moment().format('YYYY')}</span><br/>
+                    <span className={clsObj.date__txt}>by <a target="_blank" rel="noreferrer" href="https://github.com/spektr001">spectrum</a></span>
                 </div>
             </footer>
          );

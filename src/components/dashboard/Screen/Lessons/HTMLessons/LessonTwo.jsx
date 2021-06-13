@@ -60,7 +60,7 @@ export function HTMLessonTwo() {
        </head>
         
        <body>
-          <a href="https://www.anothersite.com">Click for visit site!</a> 
+          <a href="https://www.google.com">Click for visit site!</a> 
        </body>
         
     </html>`
@@ -125,7 +125,7 @@ export function HTMLessonTwo() {
                     Thanks<br />
                     Mahnaz</p>
                 </div>,
-                <a href="https://www.google.com">Click for visit site!</a>,
+                <a rel="noreferrer" target="_blank" href="https://www.google.com">Click for visit site!</a>,
                 <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600" />
             ]}
         />
