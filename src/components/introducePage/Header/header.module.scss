@@ -33,23 +33,12 @@ $main-color: #308446;
     opacity: 0.8;
     position: fixed;
     content: url(../../../assets/images/closed-box.png);
-    &:hover {
-        width: 70px;
-        content: url(../../../assets/images/open-box.png);
-        background: #00008b;
-        transition: 1s;
-        cursor: pointer;
-    }
 }
 
 .headerTitle__txt {
     font-family: "DotGothic16", sans-serif;
     font-size: 35px;
     color: #000;
-    &:hover {
-        color: transparent;
-        transition: 3s;
-    }
 }
 
 .logIn__btn:hover {
@@ -79,18 +68,29 @@ $main-color: #308446;
     }
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (hover: hover) and (pointer: fine) {
     .logoLink__img {
         margin-top: -7px;
         width: 70px;
         opacity: 0.8;
         position: fixed;
         content: url(../../../assets/images/closed-box.png);
+        &:hover {
+            width: 70px;
+            content: url(../../../assets/images/open-box.png);
+            background: #00008b;
+            transition: 1s;
+            cursor: pointer;
+        }
     }
 
     .headerTitle__txt {
         font-family: "DotGothic16", sans-serif;
         font-size: 35px;
         color: #000;
+        &:hover {
+            color: transparent;
+            transition: 3s;
+        }
     }
 }
