@@ -13,7 +13,7 @@
 
 .footerLogo__Block {
     display: grid;
-    grid-template-columns: 6em 13em;
+    grid-template-columns: 5em 13em;
     grid-column-gap: 1em;
 }
 
@@ -38,6 +38,7 @@
 
 .date__txt {
     color: #ffffff;
+    font-size: 13px;
 }
 
 @media (max-width: 790px) {

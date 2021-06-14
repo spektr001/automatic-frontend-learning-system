@@ -34,7 +34,10 @@ export function Header() {
                     <a className={clsObj.logoLink__btn + " wow bounceInLeft"} onClick={handleClick}>
                         <img alt="Logo" className={clsObj.logoLink__img} />
                     </a>
-                    <Link to="/dashboard"><span className={clsObj.headerTitle__txt}>FrontEndBox</span></Link> 
+                    {localStorage.name != "" && localStorage.name != undefined 
+                    ? <Link to="/dashboard"><span className={clsObj.headerTitle__txt}>FrontEndBox</span></Link>
+                    : <span className={clsObj.headerTitle__txt}>FrontEndBox</span>}
+                     
                 </div>
                 {localStorage.name != "" && localStorage.name != undefined ? <UserBtn /> : <LogInBtn /> }
             </header>

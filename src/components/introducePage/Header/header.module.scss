@@ -52,7 +52,6 @@ $main-color: #308446;
     }
 }
 
-
 .logIn__btn:hover {
     -webkit-animation: swing 2s ease;
     animation: swing 2s ease;
@@ -68,7 +67,7 @@ $main-color: #308446;
 
 .menuHi__txt {
     margin-left: 5px;
-    color: $main-color
+    color: $main-color;
 }
 
 @media (max-width: 790px) {
@@ -77,5 +76,21 @@ $main-color: #308446;
     }
     .headerLogo__Block {
         grid-template-columns: 1em 13em;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .logoLink__img {
+        margin-top: -7px;
+        width: 70px;
+        opacity: 0.8;
+        position: fixed;
+        content: url(../../../assets/images/closed-box.png);
+    }
+
+    .headerTitle__txt {
+        font-family: "DotGothic16", sans-serif;
+        font-size: 35px;
+        color: #000;
     }
 }

@@ -26,7 +26,7 @@ export function Dashboard() {
             localStorage.setItem('achiv1', "check")
         }
         
-    }, []);
+    }, [snackOpen]);
 
     return (
         <>
