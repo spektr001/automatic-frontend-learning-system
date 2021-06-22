@@ -9,7 +9,7 @@ export function BeginingScreen() {
         <div className={localStorage.theme === 'dark' ? clsObj.begining_Block_dark : clsObj.begining_Block}>
             <div className={clsObj.greet_Block}>
                 <span className={clsObj.greet__txt}>
-                    {langSwitcher("Welcome to FrontEndBox, dear " + localStorage.name + "!", "Ласкаво просимо в FrontEndBox, дорогий " + localStorage.name + "!")}
+                    {langSwitcher("Welcome to FrontEndBox, " + localStorage.name + "!", "Ласкаво просимо в FrontEndBox, " + localStorage.name + "!")}
                 </span>
             </div>
             <p className={clsObj.greet__article}>

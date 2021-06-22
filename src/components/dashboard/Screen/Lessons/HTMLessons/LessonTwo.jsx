@@ -1,5 +1,6 @@
 import React from 'react';
 import { LessonBlock } from '../LessonBlock';
+import Image from '../../../../../assets/images/image.jpg'
 
 export function HTMLessonTwo() {
 
@@ -73,7 +74,7 @@ export function HTMLessonTwo() {
        </head>
         
        <body>
-          <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">  
+          <img src="sunset.jpg" alt="Sunset" width="100" height="200">  
        </body>
         
     </html>`
@@ -126,7 +127,7 @@ export function HTMLessonTwo() {
                     Mahnaz</p>
                 </div>,
                 <a rel="noreferrer" target="_blank" href="https://www.google.com">Click for visit site!</a>,
-                <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600" />
+                <img src={Image} alt="Sunset" width="100" height="200" />
             ]}
         />
     );
