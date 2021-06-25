@@ -1,7 +1,10 @@
 # automatic-frontend-learning-system
 ## Bachelor's thesis
 by *spectrum001*
-# status: in **progress**
+# status: **finished**
+# https://frontendbox.netlify.app/ 
+# **Warning**: mobile version is adapted only for Google Chrome  
+
 `yarn/npm install`
 
 ## Add all node modules to your local project.
